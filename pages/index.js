@@ -14,10 +14,6 @@ export default function Index({ allPosts }) {
       <Layout>
         <Head>
           <title>Musings About Nothing</title>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
-            rel="stylesheet"
-          />
         </Head>
         <Container>
           <Intro />
