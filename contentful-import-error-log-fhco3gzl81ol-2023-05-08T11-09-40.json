@@ -1,0 +1,627 @@
+[
+  {
+    "ts": "2023-05-08T15:09:42.044Z",
+    "level": "error",
+    "error": {
+      "name": "BadRequest",
+      "entity": {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "p5asbbjx1p90"
+            }
+          },
+          "id": "post",
+          "type": "ContentType",
+          "createdAt": "2020-04-22T09:34:36.878Z",
+          "updatedAt": "2020-04-22T12:23:57.726Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 3,
+          "publishedAt": "2020-04-22T12:23:57.726Z",
+          "firstPublishedAt": "2020-04-22T09:34:37.228Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "066RqBikAjzKy0SWUEtFvH"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "066RqBikAjzKy0SWUEtFvH"
+            }
+          },
+          "publishedCounter": 2,
+          "version": 4,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "066RqBikAjzKy0SWUEtFvH"
+            }
+          }
+        },
+        "displayField": "title",
+        "name": "Post",
+        "description": "",
+        "fields": [
+          {
+            "id": "title",
+            "name": "Title",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "slug",
+            "name": "Slug",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "content",
+            "name": "Content",
+            "type": "RichText",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "enabledMarks": [
+                  "bold",
+                  "italic",
+                  "underline",
+                  "code"
+                ],
+                "message": "Only bold, italic, underline, and code marks are allowed"
+              },
+              {
+                "enabledNodeTypes": [
+                  "heading-1",
+                  "heading-2",
+                  "heading-3",
+                  "heading-4",
+                  "heading-5",
+                  "heading-6",
+                  "ordered-list",
+                  "unordered-list",
+                  "hr",
+                  "blockquote",
+                  "embedded-entry-block",
+                  "embedded-asset-block",
+                  "hyperlink",
+                  "entry-hyperlink",
+                  "asset-hyperlink",
+                  "embedded-entry-inline"
+                ],
+                "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, link to Url, link to entry, link to asset, and inline entry nodes are allowed"
+              },
+              {
+                "nodes": {
+                  "asset-hyperlink": [
+                    {
+                      "size": {
+                        "max": 10
+                      },
+                      "message": null
+                    }
+                  ],
+                  "embedded-asset-block": [
+                    {
+                      "size": {
+                        "max": 10
+                      },
+                      "message": null
+                    }
+                  ],
+                  "embedded-entry-block": [
+                    {
+                      "size": {
+                        "max": 10
+                      },
+                      "message": null
+                    }
+                  ],
+                  "embedded-entry-inline": [
+                    {
+                      "size": {
+                        "max": 10
+                      },
+                      "message": null
+                    }
+                  ],
+                  "entry-hyperlink": [
+                    {
+                      "size": {
+                        "max": 10
+                      },
+                      "message": null
+                    }
+                  ]
+                }
+              }
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "excerpt",
+            "name": "Excerpt",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "coverImage",
+            "name": "Cover Image",
+            "type": "Link",
+            "localized": false,
+            "required": true,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false,
+            "linkType": "Asset"
+          },
+          {
+            "id": "date",
+            "name": "Date",
+            "type": "Date",
+            "localized": false,
+            "required": true,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "author",
+            "name": "Author",
+            "type": "Link",
+            "localized": false,
+            "required": true,
+            "validations": [
+              {
+                "linkContentType": [
+                  "author"
+                ]
+              }
+            ],
+            "disabled": false,
+            "omitted": false,
+            "linkType": "Entry"
+          }
+        ]
+      },
+      "data": {
+        "status": 400,
+        "statusText": "Bad Request",
+        "message": "You need to omit a field before deleting it",
+        "details": {
+          "errors": [
+            {
+              "message": "Field needs to be omitted",
+              "path": [
+                "fields",
+                "postTitle"
+              ]
+            },
+            {
+              "message": "Field needs to be omitted",
+              "path": [
+                "fields",
+                "postBody"
+              ]
+            },
+            {
+              "message": "Field needs to be omitted",
+              "path": [
+                "fields",
+                "postExcerpt"
+              ]
+            },
+            {
+              "message": "Field needs to be omitted",
+              "path": [
+                "fields",
+                "postDate"
+              ]
+            },
+            {
+              "message": "Field needs to be omitted",
+              "path": [
+                "fields",
+                "postSlug"
+              ]
+            },
+            {
+              "message": "Field needs to be omitted",
+              "path": [
+                "fields",
+                "postAuthor"
+              ]
+            }
+          ],
+          "contentType": {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "fhco3gzl81ol"
+                }
+              },
+              "id": "post",
+              "type": "ContentType",
+              "createdAt": "2023-05-08T12:20:42.762Z",
+              "updatedAt": "2023-05-08T12:20:42.762Z",
+              "environment": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Environment",
+                  "id": "1da16f4b-776f-4446-b583-4dbdc4170021"
+                }
+              },
+              "revision": 1
+            },
+            "displayField": "Onfa3me0XZvzcImX",
+            "name": "Post",
+            "description": "The blog post",
+            "assembly": false,
+            "fields": [
+              {
+                "id": "Onfa3me0XZvzcImX",
+                "apiName": "postTitle",
+                "name": "postTitle",
+                "type": "Symbol",
+                "localized": false,
+                "required": true,
+                "validations": [
+                  {
+                    "unique": true
+                  }
+                ],
+                "disabled": false,
+                "omitted": false,
+                "deleted": false
+              },
+              {
+                "id": "XaW9bdV4ziEoYWbf",
+                "apiName": "postBody",
+                "name": "postBody",
+                "type": "RichText",
+                "localized": false,
+                "required": true,
+                "validations": [
+                  {
+                    "enabledMarks": [
+                      "bold",
+                      "italic",
+                      "underline",
+                      "code",
+                      "superscript",
+                      "subscript"
+                    ],
+                    "message": "Only bold, italic, underline, code, superscript, and subscript marks are allowed"
+                  },
+                  {
+                    "enabledNodeTypes": [
+                      "heading-1",
+                      "heading-2",
+                      "heading-3",
+                      "heading-4",
+                      "heading-5",
+                      "heading-6",
+                      "unordered-list",
+                      "hr",
+                      "blockquote",
+                      "embedded-entry-block",
+                      "embedded-asset-block",
+                      "table",
+                      "hyperlink",
+                      "entry-hyperlink",
+                      "asset-hyperlink",
+                      "embedded-entry-inline",
+                      "ordered-list"
+                    ],
+                    "message": "Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, unordered list, horizontal rule, quote, block entry, asset, table, link to Url, link to entry, link to asset, inline entry, and ordered list nodes are allowed"
+                  },
+                  {
+                    "nodes": {
+                    }
+                  }
+                ],
+                "disabled": false,
+                "omitted": false,
+                "deleted": false
+              },
+              {
+                "id": "NN24bYfF4Ao5hQoW",
+                "apiName": "postExcerpt",
+                "name": "postExcerpt",
+                "type": "Text",
+                "localized": false,
+                "required": true,
+                "validations": [
+                ],
+                "disabled": false,
+                "omitted": false,
+                "deleted": false
+              },
+              {
+                "id": "DdndaQbF3yLfHBJ9",
+                "apiName": "coverImage",
+                "name": "coverImage",
+                "type": "Link",
+                "localized": false,
+                "required": true,
+                "validations": [
+                ],
+                "disabled": false,
+                "omitted": false,
+                "deleted": false,
+                "linkType": "Asset"
+              },
+              {
+                "id": "mlBBHKAiHlaEECnE",
+                "apiName": "postDate",
+                "name": "postDate",
+                "type": "Date",
+                "localized": false,
+                "required": true,
+                "validations": [
+                ],
+                "disabled": false,
+                "omitted": false,
+                "deleted": false
+              },
+              {
+                "id": "aawa8QfniyhD66xD",
+                "apiName": "postSlug",
+                "name": "postSlug",
+                "type": "Symbol",
+                "localized": false,
+                "required": true,
+                "validations": [
+                ],
+                "disabled": false,
+                "omitted": false,
+                "deleted": false
+              },
+              {
+                "id": "Acqb9FqdcjbCvQGM",
+                "apiName": "postAuthor",
+                "name": "postAuthor",
+                "type": "Link",
+                "localized": false,
+                "required": true,
+                "validations": [
+                ],
+                "disabled": false,
+                "omitted": false,
+                "deleted": false,
+                "linkType": "Entry"
+              }
+            ]
+          }
+        },
+        "request": {
+          "url": "/spaces/fhco3gzl81ol/environments/master/content_types/post",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.import/8.5.50; feature library-import; sdk contentful-management.js/0.0.0-determined-by-semantic-release; platform node.js/v18.16.0; os Windows/v18.16.0;",
+            "CF-Sequence": "a638392a-fdb5-40f3-b71c-dfbb55e4d4e0",
+            "Authorization": "Bearer ...GZM5A",
+            "X-Contentful-Version": 2,
+            "User-Agent": "axios/0.27.2",
+            "Content-Length": 1980
+          },
+          "method": "put",
+          "payloadData": "{\"displayField\":\"title\",\"name\":\"Post\",\"description\":\"\",\"fields\":[{\"id\":\"title\",\"name\":\"Title\",\"type\":\"Symbol\",\"localized\":false,\"required\":true,\"validations\":[],\"disabled\":false,\"omitted\":false},{\"id\":\"slug\",\"name\":\"Slug\",\"type\":\"Symbol\",\"localized\":false,\"required\":true,\"validations\":[],\"disabled\":false,\"omitted\":false},{\"id\":\"content\",\"name\":\"Content\",\"type\":\"RichText\",\"localized\":false,\"required\":true,\"validations\":[{\"enabledMarks\":[\"bold\",\"italic\",\"underline\",\"code\"],\"message\":\"Only bold, italic, underline, and code marks are allowed\"},{\"enabledNodeTypes\":[\"heading-1\",\"heading-2\",\"heading-3\",\"heading-4\",\"heading-5\",\"heading-6\",\"ordered-list\",\"unordered-list\",\"hr\",\"blockquote\",\"embedded-entry-block\",\"embedded-asset-block\",\"hyperlink\",\"entry-hyperlink\",\"asset-hyperlink\",\"embedded-entry-inline\"],\"message\":\"Only heading 1, heading 2, heading 3, heading 4, heading 5, heading 6, ordered list, unordered list, horizontal rule, quote, block entry, asset, link to Url, link to entry, link to asset, and inline entry nodes are allowed\"},{\"nodes\":{\"asset-hyperlink\":[{\"size\":{\"max\":10},\"message\":null}],\"embedded-asset-block\":[{\"size\":{\"max\":10},\"message\":null}],\"embedded-entry-block\":[{\"size\":{\"max\":10},\"message\":null}],\"embedded-entry-inline\":[{\"size\":{\"max\":10},\"message\":null}],\"entry-hyperlink\":[{\"size\":{\"max\":10},\"message\":null}]}}],\"disabled\":false,\"omitted\":false},{\"id\":\"excerpt\",\"name\":\"Excerpt\",\"type\":\"Symbol\",\"localized\":false,\"required\":true,\"validations\":[],\"disabled\":false,\"omitted\":false},{\"id\":\"coverImage\",\"name\":\"Cover Image\",\"type\":\"Link\",\"localized\":false,\"required\":true,\"validations\":[],\"disabled\":false,\"omitted\":false,\"linkType\":\"Asset\"},{\"id\":\"date\",\"name\":\"Date\",\"type\":\"Date\",\"localized\":false,\"required\":true,\"validations\":[],\"disabled\":false,\"omitted\":false},{\"id\":\"author\",\"name\":\"Author\",\"type\":\"Link\",\"localized\":false,\"required\":true,\"validations\":[{\"linkContentType\":[\"author\"]}],\"disabled\":false,\"omitted\":false,\"linkType\":\"Entry\"}]}"
+        },
+        "requestId": "43ac931b-084f-42f5-9a50-13d4ce7266fe"
+      }
+    }
+  },
+  {
+    "ts": "2023-05-08T15:09:42.219Z",
+    "level": "error",
+    "error": {
+      "name": "BadRequest",
+      "entity": {
+        "sys": {
+          "space": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Space",
+              "id": "p5asbbjx1p90"
+            }
+          },
+          "id": "author",
+          "type": "ContentType",
+          "createdAt": "2020-04-22T09:32:50.535Z",
+          "updatedAt": "2020-04-22T09:32:50.885Z",
+          "environment": {
+            "sys": {
+              "id": "master",
+              "type": "Link",
+              "linkType": "Environment"
+            }
+          },
+          "publishedVersion": 1,
+          "publishedAt": "2020-04-22T09:32:50.885Z",
+          "firstPublishedAt": "2020-04-22T09:32:50.885Z",
+          "createdBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "066RqBikAjzKy0SWUEtFvH"
+            }
+          },
+          "updatedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "066RqBikAjzKy0SWUEtFvH"
+            }
+          },
+          "publishedCounter": 1,
+          "version": 2,
+          "publishedBy": {
+            "sys": {
+              "type": "Link",
+              "linkType": "User",
+              "id": "066RqBikAjzKy0SWUEtFvH"
+            }
+          }
+        },
+        "displayField": "name",
+        "name": "Author",
+        "description": "",
+        "fields": [
+          {
+            "id": "name",
+            "name": "Name",
+            "type": "Symbol",
+            "localized": false,
+            "required": true,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false
+          },
+          {
+            "id": "picture",
+            "name": "Picture",
+            "type": "Link",
+            "localized": false,
+            "required": true,
+            "validations": [
+            ],
+            "disabled": false,
+            "omitted": false,
+            "linkType": "Asset"
+          }
+        ]
+      },
+      "data": {
+        "status": 400,
+        "statusText": "Bad Request",
+        "message": "You need to omit a field before deleting it",
+        "details": {
+          "errors": [
+            {
+              "message": "Field needs to be omitted",
+              "path": [
+                "fields",
+                "authorName"
+              ]
+            },
+            {
+              "message": "Field needs to be omitted",
+              "path": [
+                "fields",
+                "profilePicture"
+              ]
+            }
+          ],
+          "contentType": {
+            "sys": {
+              "space": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Space",
+                  "id": "fhco3gzl81ol"
+                }
+              },
+              "id": "author",
+              "type": "ContentType",
+              "createdAt": "2023-05-08T12:10:33.866Z",
+              "updatedAt": "2023-05-08T12:42:24.132Z",
+              "environment": {
+                "sys": {
+                  "type": "Link",
+                  "linkType": "Environment",
+                  "id": "1da16f4b-776f-4446-b583-4dbdc4170021"
+                }
+              },
+              "revision": 3
+            },
+            "displayField": "iFjAjPqEvYoXVEFA",
+            "name": "Author",
+            "description": "The author of the post",
+            "assembly": false,
+            "fields": [
+              {
+                "id": "iFjAjPqEvYoXVEFA",
+                "apiName": "authorName",
+                "name": "authorName",
+                "type": "Symbol",
+                "localized": false,
+                "required": true,
+                "validations": [
+                ],
+                "disabled": false,
+                "omitted": false,
+                "deleted": false
+              },
+              {
+                "id": "DeCZgKvHHZaCoPJx",
+                "apiName": "profilePicture",
+                "name": "profilePicture",
+                "type": "Link",
+                "localized": false,
+                "required": true,
+                "validations": [
+                ],
+                "disabled": false,
+                "omitted": false,
+                "deleted": false,
+                "linkType": "Asset"
+              }
+            ]
+          }
+        },
+        "request": {
+          "url": "/spaces/fhco3gzl81ol/environments/master/content_types/author",
+          "headers": {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/vnd.contentful.management.v1+json",
+            "X-Contentful-User-Agent": "app contentful.import/8.5.50; feature library-import; sdk contentful-management.js/0.0.0-determined-by-semantic-release; platform node.js/v18.16.0; os Windows/v18.16.0;",
+            "CF-Sequence": "a638392a-fdb5-40f3-b71c-dfbb55e4d4e0",
+            "Authorization": "Bearer ...GZM5A",
+            "X-Contentful-Version": 6,
+            "User-Agent": "axios/0.27.2",
+            "Content-Length": 346
+          },
+          "method": "put",
+          "payloadData": "{\"displayField\":\"name\",\"name\":\"Author\",\"description\":\"\",\"fields\":[{\"id\":\"name\",\"name\":\"Name\",\"type\":\"Symbol\",\"localized\":false,\"required\":true,\"validations\":[],\"disabled\":false,\"omitted\":false},{\"id\":\"picture\",\"name\":\"Picture\",\"type\":\"Link\",\"localized\":false,\"required\":true,\"validations\":[],\"disabled\":false,\"omitted\":false,\"linkType\":\"Asset\"}]}"
+        },
+        "requestId": "ff8d2d14-9623-436f-b36c-985883d45313"
+      }
+    }
+  }
+]
