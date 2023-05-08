@@ -16,7 +16,7 @@ export default function Footer() {
               target="_blank"
               data-te-ripple-init
               data-te-ripple-color="light"
-              className="mb-2 inline-block rounded px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+              className="mb-2 inline-block rounded px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg lg:mx-1"
               style={{ backgroundColor: "#0077b5" }}
             >
               <svg
@@ -34,7 +34,7 @@ export default function Footer() {
               target="_blank"
               data-te-ripple-init
               data-te-ripple-color="light"
-              className="mb-2 inline-block rounded px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg"
+              className="mb-2 inline-block rounded px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg lg:mx-1"
               style={{ backgroundColor: "#333" }}
             >
               <svg
