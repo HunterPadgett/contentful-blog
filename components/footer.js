@@ -5,18 +5,18 @@ export default function Footer() {
   return (
     <footer className="bg-accent-1 border-t border-accent-2">
       <Container>
-        <div className="py-28 flex flex-col lg:flex-row items-center">
+        <div className="py-20 flex flex-col lg:flex-row items-center">
           <h3 className="text-4xl lg:text-5xl font-bold tracking-tighter leading-tight text-center lg:text-left mb-10 lg:mb-0 lg:pr-4 lg:w-1/2">
             From the Mind of Hunter Padgett
           </h3>
-          <div className="flex flex-col lg:flex-row justify-center items-center lg:pl-4 lg:w-1/2">
+          <div className="flex flex-row lg:justify-center lg:flex-row items-center lg:pl-4 lg:w-1/2">
             {/* <!-- Linkedin --> */}
             <a
               href="https://www.linkedin.com/in/hunterpadgett1/"
               target="_blank"
               data-te-ripple-init
               data-te-ripple-color="light"
-              className="mb-2 inline-block rounded px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg lg:mx-1"
+              className="mx-1 inline-block rounded px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg lg:mx-1"
               style={{ backgroundColor: "#0077b5" }}
             >
               <svg
@@ -34,7 +34,7 @@ export default function Footer() {
               target="_blank"
               data-te-ripple-init
               data-te-ripple-color="light"
-              className="mb-2 inline-block rounded px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg lg:mx-1"
+              className="mx-1 inline-block rounded px-6 py-2.5 text-xs font-medium uppercase leading-normal text-white shadow-md transition duration-150 ease-in-out hover:shadow-lg focus:shadow-lg focus:outline-none focus:ring-0 active:shadow-lg lg:mx-1"
               style={{ backgroundColor: "#333" }}
             >
               <svg
