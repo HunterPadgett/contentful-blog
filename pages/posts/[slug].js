@@ -28,7 +28,7 @@ export default function Post({ post, morePosts, preview }) {
           <>
             <article>
               <Head>
-                <title>Musings About Nothing</title>
+                <title>Nothing | Personal Blog</title>
                 <meta property="og:image" content={post.coverImage.url} />
               </Head>
               <PostHeader

@@ -13,7 +13,7 @@ export default function Index({ allPosts }) {
     <>
       <Layout>
         <Head>
-          <title>Musings About Nothing</title>
+          <title>Nothing | Personal Blog</title>
         </Head>
         <Container>
           <Intro />
