@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Script from "next/script";
-import { CMS_NAME, HOME_OG_IMAGE_URL } from "../lib/constants";
+import { HOME_OG_IMAGE_URL } from "../lib/constants";
 
 export default function Meta() {
   return (
@@ -34,7 +34,7 @@ export default function Meta() {
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta name="description" content={`A blog from Hunter Padgett.`} />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+      <meta property="og:image" content="/studio.jpg" />
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
         async
