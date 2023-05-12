@@ -1,13 +1,20 @@
-# A statically generated blog using Next.js and Contentful
+# Nothing Blog
 
-This example showcases Next.js's [Static Generation](https://nextjs.org/docs/basic-features/pages) feature using [Contentful](https://www.contentful.com/) as the data source.
+## Description
+
+This project showcases a dynamic, mobile-responsive, and SEO-friendly blog using Next.js and Contentful CMS, resulting in an optimal user experience across devices and improved search engine rankings. It Leverages Contentful's headless CMS to manage and store blog content, enabling easy content updates and improvements without requiring technical knowledge and showcasing proficiency in using CMS to create rich and engaging content. Utilizes webhooks and the revalidate API to automatically publish new content to the deployed site, streamlining the content management process and ensuring timely updates for site visitors while demonstrating the ability to integrate CMS with other technologies to optimize content delivery and management.
+
+Deployed link: [https://nothing-blog.vercel.app/](https://nothing-blog.vercel.app/)
 
 ![image](https://user-images.githubusercontent.com/106113692/236975430-2fff25f4-7cbb-4f2a-aa67-b43d1b13ae87.png)
 ![image](https://user-images.githubusercontent.com/106113692/236975501-2c0619f6-5429-468a-b498-c2198ae36f0c.png)
 
-## Demo
+## Table of Contents
 
-### [https://nothing-blog.vercel.app/](https://nothing-blog.vercel.app/)
+- [How to use](#how-to-use)
+- [Configuration](#onfiguration)
+- [Technologies](#technologies)
+- [Questions](#questions)
 
 ## How to use
 
@@ -187,55 +194,12 @@ yarn dev
 
 Your blog should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
 
-### Step 8. Deploy on Vercel
 
-You can deploy this app to the cloud with [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## Technologies
 
-#### Deploy Your Local Project
+This app was built with Next.js, Contentful. The app is hosted on Vercel.
 
-To deploy your local project to Vercel, push it to GitHub/GitLab/Bitbucket and [import to Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example).
+## Questions
 
-**Important**: When you import your project on Vercel, make sure to click on **Environment Variables** and set them to match your `.env.local` file.
+If you would like to see more of my work, checkout my [GitHub](https://github.com/HunterPadgett) repo and my [portfolio](https://hunterpadgett.netlify.app/). If you have any additional questions, please contact me directly at: hunterpadgett.dev@gmail.com
 
-#### Deploy from Our Template
-
-Alternatively, you can deploy using our template by clicking on the Deploy button below.
-
-This will deploy the Next.js project as well as connect it to your Contentful space using the Vercel Contentful Integration. If you are using Preview Mode, make sure to add `CONTENTFUL_PREVIEW_SECRET` as an [Environment Variable](https://vercel.com/docs/environment-variables) as well.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fcms-contentful&project-name=nextjs-contentful-blog&repository-name=nextjs-contentful-blog&demo-title=Next.js+Blog&demo-description=Static+blog+with+multiple+authors+using+Preview+Mode&demo-url=https%3A%2F%2Fnext-blog-contentful.vercel.app%2F&demo-image=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Fv1625705016%2Ffront%2Fexamples%2FCleanShot_2021-07-07_at_19.43.15_2x.png&integration-ids=oac_aZtAZpDfT1lX3zrnWy7KT9VA&env=CONTENTFUL_PREVIEW_SECRET,CONTENTFUL_REVALIDATE_SECRET&envDescription=Any%20URL%20friendly%20value%20to%20secure%20Your%20App)
-
-### Step 9. Try using On-Demand Revalidation
-
-In your Contentful space, go to **Settings > Webhooks** and add a new webhook:
-
-- **Give the webhook a name**
-- **Activate:** Check the activate checkbox to ensure the webhook is marked as active
-- **Specify the POST URL:** Using the URL from your Vercel deployment in step 8, add the path `/api/revalidate` at the end, so it would look something like:
-
-  ```
-  https://<YOUR_VERCEL_DEPLOYMENT_URL>/api/revalidate
-  ```
-
-  Replace `<YOUR_VERCEL_DEPLOYMENT_URL>` with your own deployment URL as noted in the Vercel dashboard.
-
-- **Specify Triggers:** You can choose to trigger for all events or specific events only, such as the Publishing and Unpublishing of Entries and Assets, as shown below.
-
-  ![Content webhook url](./docs/content-webhook-url.png)
-
-- **Specify Secret Header:** Add a secret header named `x-vercel-reval-key` and enter the value of the
-  `CONTENTFUL_REVALIDATE_SECRET` from before.
-
-  ![Content secret header](./docs/content-secret-header.png)
-
-- **Set Content type:** Set content type to `application/json` in the dropdown.
-
-  ![Content publish changes](./docs/content-content-type.png)
-
-- **Edit post:** Now, try editing the title of one of your blog posts in Contentful and click Publish. You should see the changed reflected in the website you just deployed, all without triggering a build! Behind the scenes a call was made to the revalidate api that triggers a revalidation of both the landing page and the specific post that was changed.
-
-  ![Content publish changes](./docs/content-publish-changes.png)
-
-- **Verify:** You can verify if your request was made successfully by checking the webhook request log on Contentful and checking for a successful 200 status code, or by having your functions tab open on Vercel when committing the change (log drains may also be used). If you are experiencing issues with the api call, ensure you have correctly entered in the value for environment variable `CONTENTFUL_REVALIDATE_SECRET` within your Vercel deployment.
-
-  ![Content successful request](./docs/content-successful-request.png)
